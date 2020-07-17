@@ -1,0 +1,12 @@
+<h1>Search Author</h1><br>
+<form action="/authors" method="GET">
+    <label>name</label><br>
+    <input type="text" name="name" value="<%- searchOptions.name %>"/><br>
+    <button type="Submit">Search</button>
+</form>
+<br>
+<% if(locals.authors != null) { %>
+<% authors.forEach(author => { %>
+    <div><%= author.name %></div>
+    <% }) %>
+<% } %>
